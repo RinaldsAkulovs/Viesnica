@@ -1,0 +1,104 @@
+html {
+  background-image: url(../static/img/banner2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#submit:hover { cursor: pointer; }
+
+.menu{
+  margin-top: 65px;
+  padding: 0;
+  margin-left: 50px;
+  list-style-type: none;
+}
+
+.menu li{
+  display: inline;
+  padding-left: 20px;
+}
+
+.menu ul{
+  padding-left:20px;
+}
+
+.menu a{
+  color: #fff;
+  padding: 0px 0px 10px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 70px;
+  font-size: 15px;
+  font-family:"Raleway",sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.menu a:hover{
+  text-decoration: underline;
+}
+
+.selected a{
+  text-decoration: underline;
+}
+
+.lag a{
+  margin-left: -15px;
+}
+
+.logo{
+  position: absolute;
+  top: 25px;
+  left: 600px;
+}
+
+.btn{
+  width: 150px;
+  height: 44px;
+  color: white;
+  background-color: #009DFF;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 400;
+  font-family:"Raleway",sans-serif;
+
+}
+
+.btn:hover{
+  transition: 0.3s linear;
+  background-color: white;
+  color: #009DFF;
+}
+
+.button{
+  position: absolute;
+  top: 50px;
+  left: 87%;
+}
+
+.slogan{
+  text-align: center;
+  margin-top: 200px;
+  color: white;
+  letter-spacing: 3px;
+  font-family:"Raleway",sans-serif;
+  font-style: normal;
+  line-height: 1.2em;
+}
+
+h3{
+  font-size: 80px;
+  font-weight: normal;
+}
+
+p{
+  font-size: 16px;
+  font-weight: normal;
+}

@@ -1,0 +1,14 @@
+body{
+    margin-top:20px;
+    background:#FAFAFA;
+}
+
+img.profile-photo-lg{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.sakum{
+margin-bottom:100px ;
+}
