@@ -1,0 +1,51 @@
+.residence_order{
+    text-align: center;
+}
+.color{
+    background-color: rgb(159, 151, 151);
+}
+.image1{
+    width: 411px;
+    height: 242px;
+    padding-bottom: 50px;
+}
+.image2{
+    width: 411px;
+    height: 242px;
+    padding-bottom: 50px;
+}
+.btn{
+    width: 150px;
+    height: 44px;
+    color: white;
+    background-color: #009DFF;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:"Raleway",sans-serif;
+}
+.btn:hover{
+    transition: 0.3s linear;
+    background-color: white;
+    color: #009DFF;
+}
+.button{
+    top: 50px;
+    left: 87%;
+    padding-bottom:20px;
+}
+.btn2{
+    width: 150px;
+    height: 44px;
+    color: white;
+    background-color: #009DFF;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:"Raleway",sans-serif;
+}
+.button2{
+    top: 50px;
+    left: 87%;
+    padding-right:190px;
+}
