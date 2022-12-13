@@ -59,24 +59,23 @@ html {
   left: 600px;
 }
 
-.btn{
+.wow{
   width: 100px;
   height: 36px;
   color: black;
-  background-color: white;
   font-size: 14px;
   font-weight: 400;
   font-family:"Raleway",sans-serif;
   border-radius: 24px;
 }
 
-.btn:hover{
+.wow:hover{
   transition: 0.3s linear;
   background-color: white;
   color: #009DFF;
 }
 
-.button1{
+.but{
   position: absolute;
   top: 50px;
   left: 87%;
@@ -93,9 +92,6 @@ html {
   top: 50px;
   left: 73%;
 }
-
-
-
 .slogan{
   text-align: center;
   margin-top: 200px;
@@ -106,7 +102,7 @@ html {
   line-height: 1.2em;
 }
 
-h3{
+.hotel{
   font-size: 80px;
   font-weight: normal;
 }
