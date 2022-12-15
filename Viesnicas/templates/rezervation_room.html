@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,27 +20,30 @@
             <div class="col text-center">450 eiro</div>
             <div class="col text-center button">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Rezervation istaba</button>
+
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Rezervation room</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Vards"><br>
-                                <input type="text" name="Epasts vai personas dati" id="Epasts vai personals datus" class="form-control" placeholder="Epasts vai personals datus"><br>
-                                <input type="text" name="date" id="date" class="form-control" placeholder="Ierašanās datums"><br>
-                                <input type="text" name="date" id="date" class="form-control" placeholder="Izlidošanas skaits"><br>
-                                <input type="text" name="Cilvēku skaits" id="Cilvēku skaits" class="form-control" placeholder="Cilveku skaits"><br>
-                                <a href="../templates/residence_order.html"><p>Pirms apstiprināšanas, lūdzu, vispirms izlasiet mūsu viesnīcas noteikumus!!!</p></a>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Rezervet</button>
+                    <form action="/Viesnica/Viesnicas/php/data1.php" method="POST">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Rezervation room</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Vards"><br>
+                                    <input type="text" name="email" id="Epasts vai personals datus" class="form-control" placeholder="Epasts vai personals datus"><br>
+                                    <input type="text" name="date" id="date" class="form-control" placeholder="Ierašanās datums"><br>
+                                    <input type="text" name="date2" id="date" class="form-control" placeholder="Izlidošanas skaits"><br>
+                                    <input type="text" name="people_number" id="Cilvēku skaits" class="form-control" placeholder="Cilvēku skaits"><br>
+                                    <a href="../templates/residence_order.html"><p>Pirms apstiprināšanas, lūdzu, vispirms izlasiet mūsu viesnīcas noteikumus!!!</p></a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" name="registration" value="1" class="btn btn-primary submit-registration">Rezervet</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -52,6 +55,7 @@
             <div class="col text-center button">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Rezervation istaba</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <form action="/Viesnica/Viesnicas/php/data1.php" method="POST">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -68,10 +72,11 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Rezervet</button>
+                                <button type="submit" class="btn btn-primary">Rezervet</button>
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -83,6 +88,7 @@
             <div class="col text-center button">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Rezervation istaba</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <form action="/Viesnica/Viesnicas/php/data1.php" method="post">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -99,10 +105,11 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Rezervet</button>
+                                <button type="submit" class="btn btn-primary">Rezervet</button>
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
