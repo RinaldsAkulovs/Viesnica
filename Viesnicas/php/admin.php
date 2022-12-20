@@ -1,11 +1,8 @@
-<?php
-    
+<?php 
 $pdo = require_once 'lib/connection.php';
-
 $selectStatement = $pdo->prepare('SELECT * FROM `rezervation`;');
 $selectStatement->execute();
 $reservations = $selectStatement->fetchAll();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

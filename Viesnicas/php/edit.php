@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 $reservation = null;
 if (isset($_GET['id']) && !is_array($_GET['id']) && is_numeric($_GET['id'])) {
     $pdo = require_once 'lib/connection.php';
@@ -7,9 +6,7 @@ if (isset($_GET['id']) && !is_array($_GET['id']) && is_numeric($_GET['id'])) {
     $selectStatement->execute([$_GET['id']]);
     $reservation = $selectStatement->fetch();
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
