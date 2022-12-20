@@ -1,0 +1,18 @@
+.format-table{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+.pillar{
+    border: 1px solid black;
+}
+.pillar2{
+    border: 1px solid black;
+}
+.color2{
+    background-color: rgb(159, 151, 151);
+}

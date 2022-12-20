@@ -1,6 +1,6 @@
 body{
     margin-top:20px;
-    background:#FAFAFA;
+    background-color: rgb(159, 151, 151);
 }
 
 img.profile-photo-lg{
@@ -8,7 +8,16 @@ img.profile-photo-lg{
   width: 80px;
   border-radius: 50%;
 }
-
 .sakum{
 margin-bottom:100px ;
+}
+.blue{
+    top: 50px;
+    left: 87%;
+    padding-bottom:20px;
+}
+.blue2{
+    top: 50px;
+    left: 87%;
+    padding-bottom:20px;
 }
