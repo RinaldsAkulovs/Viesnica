@@ -1,113 +1,319 @@
-html {
-  background-image: url(../static/img/banner2.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 
-#submit:hover { cursor: pointer; }
+html, body{
+	height: 100%;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.fullscreen{
+	display: flex;
+	min-height: 100vh;
+	background: url("img/main_screen/banner2.png") center center no-repeat  fixed;
+	background-size: cover;
+}
 
 .menu{
-  margin-top: 65px;
-  padding: 0;
-  margin-left: 50px;
-  list-style-type: none;
-}
+	list-style-type: none;
+	padding-left: 0;
+	position: absolute;
+	margin-left: auto;
+	margin-left: 40px;
+	top: 60px;
 
-.menu li{
-  display: inline;
-  padding-left: 20px;
 }
-
-.menu ul{
-  padding-left:20px;
-}
-
 .menu a{
-  color: #fff;
-  padding: 0px 0px 10px 0px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  width: 70px;
-  font-size: 15px;
-  font-family:"Raleway",sans-serif;
-  font-weight: 600;
-  text-transform: capitalize;
-  position: relative;
+	text-decoration: none;
+	padding-left: 20px;
+	color: white;
+	font-weight:bold;
+	font-size: 16px;
 }
 
 .menu a:hover{
-  text-decoration: underline;
+	text-decoration: underline;
+
 }
 
-.selected a{
-  text-decoration: underline;
-}
-
-.lag a{
-  margin-left: -15px;
+.menu li{
+	display: inline;
 }
 
 .logo{
-  position: absolute;
-  top: 25px;
-  left: 600px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 10px;
+}
+.menu2{
+	margin-left: auto;
+	margin-right: 10px;
+	margin-top: 40px;
 }
 
-.wow{
-  width: 100px;
-  height: 36px;
-  color: black;
-  font-size: 14px;
-  font-weight: 400;
-  font-family:"Raleway",sans-serif;
-  border-radius: 24px;
+.button{
+	background: #009DFF;
+    padding: 12px 26px;
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid transparent;
+    color: #fff;
 }
-
-.wow:hover{
+.button:hover{
   transition: 0.3s linear;
   background-color: white;
   color: #009DFF;
 }
-
-.but{
-  position: absolute;
-  top: 50px;
-  left: 87%;
+.signin, .signup{
+	color:#009DFF;
+	padding-right: 10px;
 }
 
-.button2{
-  position: absolute;
-  top: 50px;
-  left: 80%;
-}
-
-.button3{
-  position: absolute;
-  top: 50px;
-  left: 73%;
-}
-.slogan{
-  text-align: center;
-  margin-top: 200px;
+.signin:hover, .signup:hover{
+  transition: 0.1s linear;
   color: white;
-  letter-spacing: 3px;
-  font-family:"Raleway",sans-serif;
-  font-style: normal;
-  line-height: 1.2em;
 }
 
-.hotel{
-  font-size: 80px;
-  font-weight: normal;
+.slogan {
+	width: 751px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+	letter-spacing: 3px;
+	font-family: "Raleway",sans-serif;
 }
 
-p{
-  font-size: 16px;
-  font-weight: normal;
+.slogan h1{
+	font-size: 80px;
+	font-weight: 400;
+}
+
+.slogan p{
+	text-align: center;
+}
+
+.about_content{
+
+}
+
+
+
+
+
+.description{
+	margin-top: 200px;
+	width: 316px;
+	height: 1px;
+	margin-left: 70px;
+}
+
+.about_photo{
+	float: right;
+	margin-right: 150px;
+}
+
+.about_photo_2{
+	margin-bottom: 60px;
+}
+
+.about_photo_1{
+	padding-right: 10px;
+}
+
+.p_about{
+	color:#009DFF;
+}
+
+.description h1{
+	font-size: 46px;
+    font-weight: 400;
+    line-height: 56px;
+    color: #1F1F1F;
+}
+
+.par{
+	color: #4D4D4D;
+	font-size: 16px;
+    line-height: 28px;
+}
+
+
+
+
+
+
+.offers{
+	margin-top: 150px;
+}
+
+.head{
+	text-align: center;
+}
+.head p{
+	color:#009DFF;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.head h1{
+	color: #1F1F1F;
+	font-size: 46px;
+	font-weight: 400;
+	margin-bottom: 90px;
+}
+
+.offer{
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.offer p{
+	color: #1F1F1F;
+	font-weight: 400;
+	font-size: 22px;
+	margin-top: 32px;
+	text-align: left;
+}
+
+.offer ul{
+	margin-top: 17px;
+	text-align: left;
+	font-size: 20px;
+    color: #4D4D4D;
+    line-height: 28px;
+    padding-left: 23px;
+}
+
+.book_now{
+	display: inline-block;
+    font-size: 14px;
+    color: #009DFF;
+    border: 1px solid #009DFF;
+    text-transform: capitalize;
+    padding: 15px 25px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.book_now:hover{
+  	transition: 0.3s linear;
+  	background-color: #007bffe3;
+  	color: white;
+}
+
+.offer_block{
+	margin: 0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+.food{
+	margin-top: 200px;
+}
+
+.food_descriprion{
+	
+	position: absolute;
+	width: 316px;
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.food_photo{
+	margin-left: 150px;
+	display: inline-block;
+}
+
+.food_photo_1{
+	margin-bottom: 60px;
+	margin-right: 10px;
+}
+
+.p_ediens{
+	color: #009DFF;
+	font-size: 14px;
+    font-weight: 400;
+}
+
+.food_descriprion h1{
+	margin-top: 30px;
+	font-size: 46px;
+    font-weight: 400;
+    line-height: 56px;
+    color: #1F1F1F;
+}
+
+.food_info{
+	font-size: 16px;
+    line-height: 28px;
+    color: #4D4D4D;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+.footer{
+	margin-top: 200px;
+	background-color: black;
+	height: 300px;
+}
+
+.footer h1{
+	margin-bottom: 20px;
+	font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.footer p, a{
+	line-height: 30px;
+	font-size: 16px;
+    color: #BABABA;
+    font-weight: 400;
+}
+
+.footer a:hover{
+	color: white;
+}
+
+.adress, .reservation, .navigation{
+	margin-top: 100px;
+	float: left;
+	text-align: center;
+	margin-left: 120px;
+}
+
+.info{
+	margin-left: 10%;
 }
