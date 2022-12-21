@@ -13,7 +13,7 @@ if (isset($_GET['id']) && !is_array($_GET['id']) && is_numeric($_GET['id'])) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Edit</title>
-        <link href="../static/css/bootstrap.css" rel="stylesheet">
+        <link href="../static/bootstrap.css" rel="stylesheet">
     </head>
     <body>
         <div class="container mt-5">
