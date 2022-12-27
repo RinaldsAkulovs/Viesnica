@@ -11,6 +11,7 @@ $reservations = $selectStatement->fetchAll();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Reservations</title>
         <link href="../static/bootstrap.css" rel="stylesheet">
+        <link href="../static/about.css" rel="stylesheet">
     </head>
     <body>
         <div class="container mt-5">
@@ -40,6 +41,14 @@ $reservations = $selectStatement->fetchAll();
                 <?php endforeach; ?>
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col text-center">
+                    <a href="../php/AdminSingUp.php"><button type="submit" name="submit" id="submit">Continue</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <a href="../templates/index.html"><button class="thg" type="submit" name="submit" id="submit">Back on Montana</button></a>
         </div>
     </body>
 </html>

@@ -1,4 +1,9 @@
-body{
+.thg{
+    position:absolute;
+    top:1px;
+    left:1px;
+}
+.thy{
     margin-top:20px;
     background-color: rgb(159, 151, 151);
 }
