@@ -41,6 +41,9 @@ $singup = $selectStatement->fetchAll();
         <div class="col text-center">
             <a href="../php/admin.php"><button type="submit" name="submit" id="submit">Back</button></a>
         </div>
+        <div class="col text-center">
+            <a href="../php/AdminSingIn.php"><button type="submit" name="submit" id="submit">Continue</button></a>
+        </div>
     </div>
 </div>
 <div class="col">
