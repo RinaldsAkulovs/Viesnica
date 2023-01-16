@@ -18,7 +18,10 @@ if (isset($_POST['cont'])) {
         }
     }
     if (!$errors){
-        $pdo = require_once 'lib/connection.php';
+        $pdo = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8', 'root', 'root', [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
         $email = $_POST['email'];
         $psw = $_POST['password-one'];
         $selectStatement = $pdo->prepare("SELECT COUNT(*) AS qty FROM `signin` 

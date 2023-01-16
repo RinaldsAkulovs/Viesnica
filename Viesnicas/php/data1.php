@@ -14,10 +14,10 @@ $errors = [];
 if (isset($_POST['registration'])) {
     foreach ($parameters as $param) {
         if (!isset($_POST[$param]) || is_array($_POST[$param]) || trim($_POST[$param]) === '') {
-            $errors[] = sprintf('Wrong or empty %s', $param);
+            $errors[] = sprintf('<h1>Wrong or empty %s</h1>', $param);
         }
     }
-    if (!$errors) {
+    if (!$errors){
         $pdo = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8', 'root', 'root', [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
@@ -30,17 +30,31 @@ if (isset($_POST['registration'])) {
         $selectStatement = $pdo->prepare("SELECT COUNT(*) AS qty FROM `rezervation` 
         WHERE `Name` = ? OR `Email_or_personal_data` = ? OR `Arrival_Date` = ? OR `Number_of_departures` = ? OR `Number_of_people` = ?");
         $selectStatement->execute([$name, $email, $date, $date2, $peopleNumber]);
-        if ($row = $selectStatement->fetch()) {
+        if ($row = $selectStatement->fetch()){
             if ($row['qty'] > 0) {
                 echo '<h1 class="error cartoon">Error,This user already exists<h1>';
                 echo '<a href="../templates/rezervation_room.html"><button type="button" class="btn btn-secondary left-button" data-bs-dismiss="modal">Back</button></a>';
                 die;
             }
         }
+        if(!empty($_POST['people_number'])){
+            $people_number2 = trim(htmlspecialchars($_POST['people_number']));
+            $people_number2 = filter_var($people_number2,FILTER_VALIDATE_INT);
+            if ($people_number2 === false){
+                die('<h1>Invalid People Number</h1>');
+            }
+        }
+        if(!empty($_POST['email'])) {
+            $email2 = trim(htmlspecialchars($_POST['email']));
+            $email2 = filter_var($email2, FILTER_VALIDATE_INT);
+            if ($email2 === false) {
+                die('<h1>Invalid Email</h1>');
+            }
+        }
         $statement = $pdo->prepare("INSERT INTO `rezervation` (`Name`,`Email_or_personal_data`,`Arrival_Date`,`Number_of_departures`,`Number_of_people`) 
 VALUES(?, ?, ?, ?, ?)");
         $statement->execute([$name, $email, $date, $date2, $peopleNumber]);
-        header('Location: /Viesnica/Viesnicas/templates/rezervation_room.html', true, 302);
+        header('Location: rezervation_room.html', true, 302);
     } else {
         echo implode('<br>', $errors);
     }
