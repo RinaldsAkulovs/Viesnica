@@ -37,7 +37,12 @@ if (isset($_POST['registration'])) {
                 die;
             }
         }
-        if(!empty($_POST['people_number'])){
+        if(!empty($_POST['name'])){
+            $name2 = trim(htmlspecialchars($_POST['name']));
+            if(preg_match("/^[A-Za-z]+$/",$name2)){
+                die('<h1>Invalid Name</h1>');
+            }
+        }if(!empty($_POST['people_number'])){
             $people_number2 = trim(htmlspecialchars($_POST['people_number']));
             $people_number2 = filter_var($people_number2,FILTER_VALIDATE_INT);
             if ($people_number2 === false){
