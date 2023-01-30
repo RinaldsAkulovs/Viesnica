@@ -39,14 +39,8 @@ if (isset($_POST['registration'])) {
         }
         if(!empty($_POST['name'])){
             $name2 = trim(htmlspecialchars($_POST['name']));
-            if(preg_match("/^[A-Za-z]+$/",$name2)){
+            if(preg_match("/^[!#$%^&*()]+$/",$name2)){
                 die('<h1>Invalid Name</h1>');
-            }
-        }if(!empty($_POST['people_number'])){
-            $people_number2 = trim(htmlspecialchars($_POST['people_number']));
-            $people_number2 = filter_var($people_number2,FILTER_VALIDATE_INT);
-            if ($people_number2 === false){
-                die('<h1>Invalid People Number</h1>');
             }
         }
         if(!empty($_POST['email'])) {
@@ -54,6 +48,25 @@ if (isset($_POST['registration'])) {
             $email2 = filter_var($email2, FILTER_VALIDATE_INT);
             if ($email2 === false) {
                 die('<h1>Invalid Email</h1>');
+            }
+        }
+        if(!empty($_POST['date'])){
+            $name2 = trim(htmlspecialchars($_POST['name']));
+            if(preg_match("/^[!#$%^&*()]+$/",$name2)){
+                die('<h1>Invalid data</h1>');
+            }
+        }
+        if(!empty($_POST['date2'])){
+            $name2 = trim(htmlspecialchars($_POST['name']));
+            if(preg_match("/^[!#$%^&*()]+$/",$name2)){
+                die('<h1>Invalid data2</h1>');
+            }
+        }
+        if(!empty($_POST['people_number'])){
+            $people_number2 = trim(htmlspecialchars($_POST['people_number']));
+            $people_number2 = filter_var($people_number2,FILTER_VALIDATE_INT);
+            if ($people_number2 === false){
+                die('<h1>Invalid People Number</h1>');
             }
         }
         $statement = $pdo->prepare("INSERT INTO `rezervation` (`Name`,`Email_or_personal_data`,`Arrival_Date`,`Number_of_departures`,`Number_of_people`) 
