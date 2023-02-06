@@ -45,19 +45,19 @@ if (isset($_POST['registration'])) {
         }
         if(!empty($_POST['email'])) {
             $email2 = trim(htmlspecialchars($_POST['email']));
-            $email2 = filter_var($email2, FILTER_VALIDATE_INT);
+            $email2 = filter_var($email2, FILTER_VALIDATE_EMAIL);
             if ($email2 === false) {
                 die('<h1>Invalid Email</h1>');
             }
         }
         if(!empty($_POST['date'])){
-            $name2 = trim(htmlspecialchars($_POST['name']));
+            $name2 = trim(htmlspecialchars($_POST['date']));
             if(preg_match("/^[!#$%^&*()]+$/",$name2)){
                 die('<h1>Invalid data</h1>');
             }
         }
         if(!empty($_POST['date2'])){
-            $name2 = trim(htmlspecialchars($_POST['name']));
+            $name2 = trim(htmlspecialchars($_POST['date2']));
             if(preg_match("/^[!#$%^&*()]+$/",$name2)){
                 die('<h1>Invalid data2</h1>');
             }
