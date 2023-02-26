@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montana</title>
-    <link rel="stylesheet" href="../static/error.css">
-    <link rel="stylesheet" href="../static/bootstrap.css">
-</head>
-</html>
 <?php
 $parameters = ['name', 'email', 'date', 'date2', 'people_number'];
 $errors = [];
@@ -28,13 +18,12 @@ if (isset($_POST['registration'])) {
         $date2 = $_POST['date2'];
         $peopleNumber = $_POST['people_number'];
         $selectStatement = $pdo->prepare("SELECT COUNT(*) AS qty FROM `rezervation` 
-        WHERE `Name` = ? OR `Email_or_personal_data` = ? OR `Arrival_Date` = ? OR `Number_of_departures` = ? OR `Number_of_people` = ?");
-        $selectStatement->execute([$name, $email, $date, $date2, $peopleNumber]);
+        WHERE `Email_or_personal_data` = ?");
+        $selectStatement->execute([$email]);
         if ($row = $selectStatement->fetch()){
             if ($row['qty'] > 0) {
-                echo '<h1 class="error cartoon">Error,This user already exists<h1>';
-                echo '<a href="../templates/rezervation_room.html"><button type="button" class="btn btn-secondary left-button" data-bs-dismiss="modal">Back</button></a>';
-                die;
+                echo '<h1>Error,This user already exists<h1>';
+                die();
             }
         }
         if(!empty($_POST['name'])){
