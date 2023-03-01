@@ -61,7 +61,7 @@ if (isset($_POST['registration'])) {
         $statement = $pdo->prepare("INSERT INTO `rezervation` (`Name`,`Email_or_personal_data`,`Arrival_Date`,`Number_of_departures`,`Number_of_people`) 
 VALUES(?, ?, ?, ?, ?)");
         $statement->execute([$name, $email, $date, $date2, $peopleNumber]);
-        header('Location: rezervation_room.html', true, 302);
+        header('Location: data1.php', true, 302);
     } else {
         echo implode('<br>', $errors);
     }
@@ -101,4 +101,3 @@ $statement->execute([$name4, $epasts_vai_personas_dati5, $date16, $date23, $cilv
 
 ?>
 */
-?>
