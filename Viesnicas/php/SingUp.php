@@ -34,7 +34,7 @@ if (isset($_POST['butt'])) {
         }
         $statement = $pdo->prepare("INSERT INTO `singup` (`Email`,`Password`,`RepeatPassword`) VALUES(?, ?, ?)");
         $statement->execute([$email, $psw, $pswrepeat]);
-        header('Location: AdminSingUp.php', true, 302);
+        echo '<h1>Esat veiksmīgi reģistrēts</h1>';
     } else {
         echo implode('<br>', $errors);
     }

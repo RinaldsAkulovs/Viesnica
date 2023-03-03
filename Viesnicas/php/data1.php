@@ -61,7 +61,7 @@ if (isset($_POST['registration'])) {
         $statement = $pdo->prepare("INSERT INTO `rezervation` (`Name`,`Email_or_personal_data`,`Arrival_Date`,`Number_of_departures`,`Number_of_people`) 
 VALUES(?, ?, ?, ?, ?)");
         $statement->execute([$name, $email, $date, $date2, $peopleNumber]);
-        header('Location: data1.php', true, 302);
+        echo '<h1>Esat veiksmīgi reģistrējies</h1>';
     } else {
         echo implode('<br>', $errors);
     }

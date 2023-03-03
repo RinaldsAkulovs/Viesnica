@@ -34,7 +34,7 @@ if (isset($_POST['cont'])) {
                 die;
             }
         }
-        header('Location: index.html ', true, 302);
+        echo '<h1>Atvainojiet, šis lietotājs neeksistē.</h1>';
     } else {
         echo implode('<br>', $errors);
     }
