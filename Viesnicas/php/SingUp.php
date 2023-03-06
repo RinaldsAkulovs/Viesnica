@@ -9,7 +9,7 @@
 </head>
 </html>
 <?php
-$parameters=['email', 'password-one', 'repeatpassword'];
+$parameters=['email', 'password-one'];
 $errors=[];
 if (isset($_POST['butt'])) {
     foreach ($parameters as $param) {
@@ -18,13 +18,12 @@ if (isset($_POST['butt'])) {
         }
     }
     if (!$errors) {
-        $pdo = require_once 'lib/connection.php';
+        $pdo = require 'lib/connection.php';
         $email=$_POST['email'];
         $psw=$_POST['password-one'];
-        $pswrepeat=$_POST['repeatpassword'];
-        $selectStatement = $pdo->prepare("SELECT COUNT(*) AS qty FROM `singup` 
-        WHERE `Email` = ? OR `Password` = ? OR `RepeatPassword` = ?");
-        $selectStatement->execute([$email, $psw, $pswrepeat]);
+        $selectStatement = $pdo->prepare("SELECT COUNT(*) AS qty FROM `signin` 
+        WHERE `Email` = ? OR `Password` = ?");
+        $selectStatement->execute([$email, $psw]);
         if ($row = $selectStatement->fetch()){
             if ($row['qty'] > 0) {
                 echo '<h1 class="error cartoon">Error,This user already exists<h1>';
@@ -32,8 +31,8 @@ if (isset($_POST['butt'])) {
                 die;
             }
         }
-        $statement = $pdo->prepare("INSERT INTO `singup` (`Email`,`Password`,`RepeatPassword`) VALUES(?, ?, ?)");
-        $statement->execute([$email, $psw, $pswrepeat]);
+        $statement = $pdo->prepare("INSERT INTO `signin` (`Email`,`Password`) VALUES(?, ?)");
+        $statement->execute([$email, $psw]);
         echo '<h1>Esat veiksmīgi reģistrēts</h1>';
     } else {
         echo implode('<br>', $errors);
