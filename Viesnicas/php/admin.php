@@ -43,7 +43,7 @@ $reservations = $selectStatement->fetchAll();
             </table>
             <div class="row">
                 <div class="col text-center">
-                    <a href="../php/AdminSingUp.php"><button type="submit" name="submit" id="submit">Continue</button></a>
+                    <a href="../php/AdminSingIn.php"><button type="submit" name="submit" id="submit">Continue</button></a>
                 </div>
             </div>
         </div>

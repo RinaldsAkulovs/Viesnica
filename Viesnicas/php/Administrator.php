@@ -34,7 +34,8 @@ if (isset($_POST['continue'])){
                 die;
             }
         }
-        header('Location: /Viesnica/Viesnicas/php/admin.php', true, 302);
+        echo '<h1 class="error cartoon">Jūs ievadījāt nepareizu paroli vai login</h1>';
+        echo '<a href="../templates/Administrator.html"><button type="button" class="btn btn-secondary left-button" data-bs-dismiss="modal">Back</button></a>';
     } else {
         echo implode('<br>', $errors);
     }
