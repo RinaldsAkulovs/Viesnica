@@ -33,7 +33,7 @@ if (isset($_POST['butt'])) {
         }
         $statement = $pdo->prepare("INSERT INTO `signin` (`Email`,`Password`) VALUES(?, ?)");
         $statement->execute([$email, $psw]);
-        echo '<h1>Esat veiksmīgi reģistrēts</h1>';
+        echo '<h1 class="error cartoon">Esat veiksmīgi reģistrēts</h1>';
     } else {
         echo implode('<br>', $errors);
     }
